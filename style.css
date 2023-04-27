@@ -108,8 +108,15 @@
 
 .summary {
   font-size: large;
+  text-align: right;
+  /* direction: rtl; */
   /* display: flex;
   flex-direction: row; */
+}
+
+.summarywrap{
+  width: 100%;
+  direction: rtl;
 }
 
 .summaryimage {
