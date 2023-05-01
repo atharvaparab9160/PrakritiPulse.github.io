@@ -84,6 +84,9 @@
   margin: 0% 1.5% 1.5% 1.5%;
 }
 @media (min-width: 0px) and (max-width: 1219px) {
+  .summary{
+    text-align: center;
+  }
   .threedayclub {
     display: flex;
     align-items: center;
@@ -100,6 +103,12 @@
   }
   .onedayforcast {
     margin: 0px 10px 0px 10px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 472px) {
+  br .newline{
+    display: block;
   }
 }
 
