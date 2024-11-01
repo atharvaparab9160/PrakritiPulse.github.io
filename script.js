@@ -1,51 +1,79 @@
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "89da569304msh42427e8c3206254p1d6254jsnfaacc0313090",
-    "X-RapidAPI-Host": "weather-by-api-ninjas.p.rapidapi.com",
-  },
+const options0 = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': 'd438ce628emsha197cfce4c42daap15e05ajsn135235f5469c',
+		'x-rapidapi-host': 'foreca-weather.p.rapidapi.com'
+	}
 };
 
-const getWeather = (city) => {
-  cityName1.innerHTML = city;
-  cityName2.innerHTML = city;
-  cityName3.innerHTML = city;
-  cityName4.innerHTML = city;
-
+function getlocation_id(city){
   fetch(
-    "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=" + city,
-    options
-  )
+    "https://foreca-weather.p.rapidapi.com/location/search/" + city,
+    options0
+  )  
     .then((response) => response.json())
     .then((response) => {
       console.log(response);
+      locationid = response.locations[0].id;
+      console.log("location id:",locationid);
+      return locationid
+      })
+}
 
-      cloud_pct1.innerHTML = response.cloud_pct;
-      cloud_pct2.innerHTML = response.cloud_pct;
-      temp1.innerHTML = response.temp;
-      temp2.innerHTML = response.temp;
-      temp3.innerHTML = response.temp;
-      zerosummarytemp.innerHTML = response.temp;
-      feels_like1.innerHTML = response.feels_like;
-      feels_like2.innerHTML = response.feels_like;
-      humidity1.innerHTML = response.humidity;
-      humidity2.innerHTML = response.humidity;
-      humidity3.innerHTML = response.humidity;
-      // min_temp1.innerHTML = response.min_temp;
-      // min_temp2.innerHTML = response.min_temp;
-      // max_temp1.innerHTML = response.max_temp;
-      // max_temp2.innerHTML = response.max_temp;
-      wind_speed1.innerHTML = response.wind_speed;
-      wind_speed2.innerHTML = response.wind_speed;
-      wind_speed3.innerHTML = response.wind_speed;
-      wind_degrees1.innerHTML = response.wind_degrees;
-      wind_degrees2.innerHTML = response.wind_degrees;
-      sunrise1.innerHTML = sunriseset(response.sunrise);
-      sunrise2.innerHTML = sunriseset(response.sunrise);
-      sunset1.innerHTML = sunriseset(response.sunset);
-      sunset2.innerHTML = sunriseset(response.sunset);
-    })
-    .catch((err) => console.error(err));
+
+const getWeather = (city) => {
+  fetch(
+    "https://foreca-weather.p.rapidapi.com/location/search/" + city,
+    options0
+  )  
+    .then((response) => response.json())
+    .then((response) => {
+      console.log(response);
+      loc_id = response.locations[0].id;
+      console.log("location id:",loc_id);
+      
+      cityName1.innerHTML = city;
+      cityName2.innerHTML = city;
+      cityName3.innerHTML = city;
+      cityName4.innerHTML = city;
+
+      fetch(
+        "https://foreca-weather.p.rapidapi.com/current/"+loc_id+"?alt=0&tempunit=C&windunit=MS&tz=Europe%2FLondon&lang=en",
+        options0
+      )
+        .then((response) => response.json())
+        .then((response) => {
+          
+          console.log(response);
+          console.log("getweather",loc_id)
+          
+
+          cloud_pct1.innerHTML = response.current.cloudiness;
+          cloud_pct2.innerHTML = response.current.cloudiness;
+          temp1.innerHTML = response.current.temperature;
+          temp2.innerHTML = response.current.temperature;
+          temp3.innerHTML = response.current.temperature;
+          zerosummarytemp.innerHTML = response.current.temperature;
+          feels_like1.innerHTML = response.current.feelsLikeTemp;
+          feels_like2.innerHTML = response.current.feelsLikeTemp;
+          humidity1.innerHTML = response.current.relHumidity;
+          humidity2.innerHTML = response.current.relHumidity;
+          humidity3.innerHTML = response.current.relHumidity;
+          min_temp1.innerHTML = response.current.thunderProb;
+          min_temp2.innerHTML = response.current.thunderProb;
+          max_temp1.innerHTML = response.current.symbolPhrase;
+          max_temp2.innerHTML = response.current.symbolPhrase;
+          wind_speed1.innerHTML = response.current.windSpeed;
+          wind_speed2.innerHTML = response.current.windSpeed;
+          wind_speed3.innerHTML = response.current.windSpeed;
+          wind_degrees1.innerHTML = response.current.windDir + "° " + response.current.windDirString;
+          wind_degrees2.innerHTML = response.current.windDir + "° " + response.current.windDirString;
+          sunrise1.innerHTML = response.current.dewPoint;
+          sunrise2.innerHTML = response.current.dewPoint;
+          sunset1.innerHTML = response.current.precipProb;
+          sunset2.innerHTML = response.current.precipProb;
+    }).catch((err) => console.error(err));
+  }).catch((err) => console.error(err))
 };
 
 submit.addEventListener("click", (e) => {
@@ -55,119 +83,130 @@ submit.addEventListener("click", (e) => {
 
 getWeather("Mumbai");
 
+
+
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '3c01b0426emshd528bd071c646eap1782b0jsn791fcb41d136',
+		'x-rapidapi-host': 'foreca-weather.p.rapidapi.com'
+	}
+};
+// mumbai = 101275339
 //
 // pune row
 //
 fetch(
-  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Pune",
+  "https://foreca-weather.p.rapidapi.com/current/101259229?alt=0&tempunit=C&windunit=MS&tz=Europe%2FLondon&lang=en",
   options
 )
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
 
-    pune_cloud_pct.innerHTML = response.cloud_pct;
-    pune_temp.innerHTML = response.temp;
-    pune_feels_like.innerHTML = response.feels_like;
-    pune_humidity.innerHTML = response.humidity;
-    pune_min_temp.innerHTML = response.min_temp;
-    pune_max_temp.innerHTML = response.max_temp;
-    pune_wind_speed.innerHTML = response.wind_speed;
-    pune_wind_degrees.innerHTML = response.wind_degrees;
-    pune_sunrise.innerHTML = sunriseset(response.sunrise);
-    pune_sunset.innerHTML = sunriseset(response.sunset);
+    pune_cloud_pct.innerHTML = response.current.cloudiness;
+    pune_temp.innerHTML = response.current.temperature;
+    pune_feels_like.innerHTML = response.current.feelsLikeTemp;
+    pune_humidity.innerHTML = response.current.relHumidity;
+    pune_min_temp.innerHTML = response.current.thunderProb;
+    pune_max_temp.innerHTML = response.current.symbolPhrase;
+    pune_wind_speed.innerHTML = response.current.windSpeed;
+    pune_wind_degrees.innerHTML = response.current.windDir+ "° " + response.current.windDirString;
+    pune_sunrise.innerHTML = response.current.dewPoint;
+    pune_sunset.innerHTML = response.current.precipProb;
+    ;
   })
   .catch((err) => console.error(err));
 //
 // Banglore row
 //
 fetch(
-  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Bangalore",
+  "https://foreca-weather.p.rapidapi.com/current/101277333?alt=0&tempunit=C&windunit=MS&tz=Europe%2FLondon&lang=en",
   options
 )
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
 
-    bangalore_cloud_pct.innerHTML = response.cloud_pct;
-    bangalore_temp.innerHTML = response.temp;
-    bangalore_feels_like.innerHTML = response.feels_like;
-    bangalore_humidity.innerHTML = response.humidity;
-    bangalore_min_temp.innerHTML = response.min_temp;
-    bangalore_max_temp.innerHTML = response.max_temp;
-    bangalore_wind_speed.innerHTML = response.wind_speed;
-    bangalore_wind_degrees.innerHTML = response.wind_degrees;
-    bangalore_sunrise.innerHTML = sunriseset(response.sunrise);
-    bangalore_sunset.innerHTML = sunriseset(response.sunset);
+    bangalore_cloud_pct.innerHTML = response.current.cloudiness;
+    bangalore_temp.innerHTML = response.current.temperature;
+    bangalore_feels_like.innerHTML = response.current.feelsLikeTemp
+    bangalore_humidity.innerHTML = response.current.relHumidity;
+    bangalore_min_temp.innerHTML = response.current.thunderProb;
+    bangalore_max_temp.innerHTML = response.current.symbolPhrase;
+    bangalore_wind_speed.innerHTML = response.current.windSpeed;
+    bangalore_wind_degrees.innerHTML = response.current.windDir+ "° " + response.current.windDirString;
+    bangalore_sunrise.innerHTML = response.current.dewPoint;
+    bangalore_sunset.innerHTML = response.current.precipProb;
   })
   .catch((err) => console.error(err));
 //
 // Kolkata row
 //
 fetch(
-  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Kolkata",
+  "https://foreca-weather.p.rapidapi.com/current/101275004?alt=0&tempunit=C&windunit=MS&tz=Europe%2FLondon&lang=en",
   options
 )
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
 
-    kolkata_cloud_pct.innerHTML = response.cloud_pct;
-    kolkata_temp.innerHTML = response.temp;
-    kolkata_feels_like.innerHTML = response.feels_like;
-    kolkata_humidity.innerHTML = response.humidity;
-    kolkata_min_temp.innerHTML = response.min_temp;
-    kolkata_max_temp.innerHTML = response.max_temp;
-    kolkata_wind_speed.innerHTML = response.wind_speed;
-    kolkata_wind_degrees.innerHTML = response.wind_degrees;
-    kolkata_sunrise.innerHTML = sunriseset(response.sunrise);
-    kolkata_sunset.innerHTML = sunriseset(response.sunset);
+    kolkata_cloud_pct.innerHTML = response.current.cloudiness;
+    kolkata_temp.innerHTML = response.current.temperature;
+    kolkata_feels_like.innerHTML = response.current.feelsLikeTemp
+    kolkata_humidity.innerHTML = response.current.relHumidity;
+    kolkata_min_temp.innerHTML = response.current.thunderProb;
+    kolkata_max_temp.innerHTML = response.current.symbolPhrase;
+    kolkata_wind_speed.innerHTML = response.current.windSpeed;
+    kolkata_wind_degrees.innerHTML = response.current.windDir+ "° " + response.current.windDirString;
+    kolkata_sunrise.innerHTML = response.current.dewPoint;
+    kolkata_sunset.innerHTML = response.current.precipProb;
   })
   .catch((err) => console.error(err));
 //
 // Delhi row
 //
 fetch(
-  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Delhi",
+  "https://foreca-weather.p.rapidapi.com/current/102643743?alt=0&tempunit=C&windunit=MS&tz=Europe%2FLondon&lang=en",
   options
 )
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
 
-    delhi_cloud_pct.innerHTML = response.cloud_pct;
-    delhi_temp.innerHTML = response.temp;
-    delhi_feels_like.innerHTML = response.feels_like;
-    delhi_humidity.innerHTML = response.humidity;
-    delhi_min_temp.innerHTML = response.min_temp;
-    delhi_max_temp.innerHTML = response.max_temp;
-    delhi_wind_speed.innerHTML = response.wind_speed;
-    delhi_wind_degrees.innerHTML = response.wind_degrees;
-    delhi_sunrise.innerHTML = sunriseset(response.sunrise);
-    delhi_sunset.innerHTML = sunriseset(response.sunset);
+    delhi_cloud_pct.innerHTML = response.current.cloudiness;
+    delhi_temp.innerHTML = response.current.temperature;
+    delhi_feels_like.innerHTML = response.current.feelsLikeTemp
+    delhi_humidity.innerHTML = response.current.relHumidity;
+    delhi_min_temp.innerHTML = response.current.thunderProb;
+    delhi_max_temp.innerHTML = response.current.symbolPhrase;
+    delhi_wind_speed.innerHTML = response.current.windSpeed;
+    delhi_wind_degrees.innerHTML = response.current.windDir + "° " + response.current.windDirString;
+    delhi_sunrise.innerHTML = response.current.dewPoint;
+    delhi_sunset.innerHTML = response.current.precipProb;
   })
   .catch((err) => console.error(err));
 //
 // Bhopal row
 //
 fetch(
-  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Bhopal",
+  "https://foreca-weather.p.rapidapi.com/current/101275841?alt=0&tempunit=C&windunit=MS&tz=Europe%2FLondon&lang=en",
   options
 )
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
 
-    bhopal_cloud_pct.innerHTML = response.cloud_pct;
-    bhopal_temp.innerHTML = response.temp;
-    bhopal_feels_like.innerHTML = response.feels_like;
-    bhopal_humidity.innerHTML = response.humidity;
-    bhopal_min_temp.innerHTML = response.min_temp;
-    bhopal_max_temp.innerHTML = response.max_temp;
-    bhopal_wind_speed.innerHTML = response.wind_speed;
-    bhopal_wind_degrees.innerHTML = response.wind_degrees;
-    bhopal_sunrise.innerHTML = sunriseset(response.sunrise);
-    bhopal_sunset.innerHTML = sunriseset(response.sunset);
+    bhopal_cloud_pct.innerHTML = response.current.cloudiness;
+    bhopal_temp.innerHTML = response.current.temperature;
+    bhopal_feels_like.innerHTML = response.current.feelsLikeTemp
+    bhopal_humidity.innerHTML = response.current.relHumidity;
+    bhopal_min_temp.innerHTML = response.current.thunderProb;
+    bhopal_max_temp.innerHTML = response.current.symbolPhrase;
+    bhopal_wind_speed.innerHTML = response.current.windSpeed;
+    bhopal_wind_degrees.innerHTML = response.current.windDir+ "° " + response.current.windDirString;
+    bhopal_sunrise.innerHTML = response.current.dewPoint;
+    bhopal_sunset.innerHTML = response.current.precipProb;
   })
   .catch((err) => console.error(err));
 
@@ -220,7 +259,7 @@ submit.addEventListener("click", (e) => {
 getWeather2("Mumbai");
 
 //
-// pune row
+// pune row=101259229
 //
 fetch(
   "https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=Pune",
@@ -248,7 +287,7 @@ fetch(
   .catch((err) => console.error(err));
 
 //
-// bangalore row
+// bangalore row = 101277333
 //
 fetch(
   "https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=Bangalore",
@@ -275,7 +314,7 @@ fetch(
   .catch((err) => console.error(err));
 
 //
-// kolkata row
+// kolkata row = 101275004
 //
 fetch(
   "https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=Kolkata",
@@ -302,7 +341,7 @@ fetch(
   .catch((err) => console.error(err));
 
 //
-// delhi row
+// delhi row = 101273294
 //
 fetch(
   "https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=Delhi",
@@ -329,7 +368,7 @@ fetch(
   .catch((err) => console.error(err));
 
 //
-// bhopal row
+// bhopal row = 101275841
 //
 fetch(
   "https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=Bhopal",
@@ -381,5 +420,25 @@ function sunriseset(sectime) {
   return formattedTime;
 }
 
+
+
+
+// const options111 = {
+// 	method: 'GET',
+// 	headers: {
+// 		'x-rapidapi-key': '89da569304msh42427e8c3206254p1d6254jsnfaacc0313090',
+// 		'x-rapidapi-host': 'foreca-weather.p.rapidapi.com'
+// 	}
+// };
+
+// fetch(
+//     'https://foreca-weather.p.rapidapi.com/current/101259229?alt=0&tempunit=C&windunit=MS&tz=Europe%2FLondon&lang=en',
+//     options111
+//   )
+//     .then((response) => response.json())
+//     .then((response) => {
+//       console.log(response);
+//     })
+//     .catch((err) => console.error(err));
 
 

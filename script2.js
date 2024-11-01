@@ -20,7 +20,7 @@ const getlocationid = (city) => {
     .then((response) => {
       console.log(response);
       locationid = response.locations[0].id;
-      console.log(locationid);
+      // console.log(locationid);
 
       //forcast
       //  getforcast = (locationid) => {
@@ -80,10 +80,10 @@ const getlocationid = (city) => {
           oneforcastdate.innerHTML = response.forecast[1].date;
           onemaxtemp1.innerHTML = response.forecast[1].maxTemp;
           onemintemp1.innerHTML = response.forecast[1].minTemp;
-          max_temp1.innerHTML = response.forecast[1].maxTemp;
-          max_temp2.innerHTML = response.forecast[1].maxTemp;
-          min_temp1.innerHTML = response.forecast[1].minTemp;
-          min_temp2.innerHTML = response.forecast[1].minTemp;
+          // max_temp1.innerHTML = response.forecast[1].maxTemp;
+          // max_temp2.innerHTML = response.forecast[1].maxTemp;
+          // min_temp1.innerHTML = response.forecast[1].minTemp;
+          // min_temp2.innerHTML = response.forecast[1].minTemp;
           const avgmaxtemp1 = response.forecast[1].maxTemp;
           const avgmintemp1 = response.forecast[1].minTemp;
 
@@ -336,6 +336,7 @@ submit.addEventListener("click", (e) => {
   e.preventDefault();
   getlocationid(city.value);
 });
-getlocationid("Mumbai");
+getlocationid("mumbai");
+
 
 

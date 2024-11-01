@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PrakritiPulse</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="imageicon/favicon.png">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body id="body">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrakritiPulse</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="imageicon/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+</head>
 
-    
-    <!--  -->
-    <!-- NAVBAR -->
-    <!--  -->
-    <main id="mainbackground">
-    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+<body id="body">
+
+
+  <!--  -->
+  <!-- NAVBAR -->
+  <!--  -->
+  <main id="mainbackground">
+    <nav id="navbar" class=" navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
-        <img src="apilogo.png" alt="Weather API" id="navbarlogo" >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <img src="apilogo.png" alt="Weather API" id="navbarlogo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,14 +34,8 @@
               <a class="nav-link active" href="#">About</a>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                class="nav-link active"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <a class="nav-link dropdown-toggle" class="nav-link active" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 INSIDE APP
               </a>
               <ul class="dropdown-menu">
@@ -59,18 +43,12 @@
                 <li><a class="dropdown-item" href="#weatherforcast">8 Days Weather Forcast</a></li>
                 <li><a class="dropdown-item" href="#compareweather">Compare Weather</a></li>
                 <li><a class="dropdown-item" href="#compareaqi">Compare AQI</a></li>
-                
+
               </ul>
             </li>
           </ul>
           <form id="searchplace" class="d-flex" role="search">
-            <input
-              id="city"
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
+            <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-success" type="submit" id="submit">
               Search
             </button>
@@ -80,7 +58,7 @@
     </nav>
     <!--  -->
     <!--  -->
-    
+
     <div class="container">
       <h1 class="my-4 text-center">Weather For <span class="capitalname"> <span id="cityName1"></span> </span></h1>
     </div>
@@ -90,687 +68,728 @@
 
     <!--  -->
     <!-- temperature boxes -->
-    <!--  -->   
-      <span id="main">
+    <!--  -->
+    <span id="main">
       <div id="tempbox" class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
           <div class="card-header py-3 text-bg-primary border-primary">
             <h4 class="my-0 fw-normal">TEMPERATURES</h4>
           </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title"><span id="temp2"></span>
-                <small class="text-body-secondary fw-light"><span>&#8451;</span></small>
-              </h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>Temperature is <span id="temp1">0</span><span>&#8451;</span></li>
-                <li>Min Temp is <span id="min_temp1">0</span><span>&#8451;</span></li>
-                <li>Max Temp is <span id="max_temp1">0</span><span>&#8451;</span></li>
-              </ul>
-              <button  type="button" class="w-100 btn btn-lg btn-primary">
-                <a href="https://education.nationalgeographic.org/resource/temperature/" id="moreinfolink">More Info</a>
-              </button>
-            </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="temp2"></span>
+              <small class="text-body-secondary fw-light"><span>&#8451;</span></small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Temperature is <span id="temp1">0</span><span>&#8451;</span></li>
+              <li>Thunder Probablity : <span id="min_temp1">0</span><span>&#8451;</span></li>
+              <li>Weather Condition : <span id="max_temp1">0</span><span>&#8451;</span></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">
+              <a href="https://education.nationalgeographic.org/resource/temperature/" id="moreinfolink">More Info</a>
+            </button>
           </div>
         </div>
       </div>
+      </div>
 
-        <div id="tempbox" class="col">
-          <div class="card mb-4 rounded-3 shadow-sm border-primary">
-            <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">HUMIDITY</h4>
-            </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title"><span id="humidity2"></span>
-                <small class="text-body-secondary fw-light">%</small>
-              </h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>Humidity is <span id="humidity1">0</span>%</li>
-                <li>Cloud Cover is <span id="cloud_pct1">0</span>%</li>
-                <li>Feels Like is <span id="feels_like1">0</span><span>&#8451;</span></li>
-              </ul>
-              <button  type="button" class="w-100 btn btn-lg btn-primary">
-                <a href="https://education.nationalgeographic.org/resource/humidity/" id="moreinfolink">More Info</a>
-              </button>
-            </div>
+      <div id="tempbox" class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">HUMIDITY</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="humidity2"></span>
+              <small class="text-body-secondary fw-light">%</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Humidity is <span id="humidity1">0</span>%</li>
+              <li>Cloud Cover is <span id="cloud_pct1">0</span>%</li>
+              <li>Feels Like is <span id="feels_like1">0</span><span>&#8451;</span></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">
+              <a href="https://education.nationalgeographic.org/resource/humidity/" id="moreinfolink">More Info</a>
+            </button>
           </div>
         </div>
       </div>
+      </div>
 
-        <div id="tempbox" class="col">
-          <div class="card mb-4 rounded-3 shadow-sm border-primary">
-            <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">WIND AND TIMING INFO</h4>
-            </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span>
-                <small class="text-body-secondary fw-light">M/s</small>
-              </h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>Wind Speed is <span id="wind_speed1">0</span> m/s</li>
-                <li>Wind Direction is <span id="wind_degrees1">0</span>°</li>
-                <li>Sunrise Time is <span id="sunrise1">0</span> IST </li>
-                <li>sunset Time is <span id="sunset1">0</span> IST</li>
-              </ul>
-              <button  type="button" class="w-100 btn btn-lg btn-primary">
-                <a href="https://www.fondriest.com/news/wind-speed-and-direction.htm" id="moreinfolink">More Info</a>
-              </button>
-            </div>
+      <div id="tempbox" class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">WIND AND TIMING INFO</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span>
+              <small class="text-body-secondary fw-light">M/s</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Wind Speed is <span id="wind_speed1">0</span> m/s</li>
+              <li>Wind Direction is <span id="wind_degrees1">0°</span></li>
+              <li>Dew Point is <span id="sunrise1">0</span> °C </li>
+              <li>Precipitation Probablity is <span id="sunset1">0</span> %</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">
+              <a href="https://www.fondriest.com/news/wind-speed-and-direction.htm" id="moreinfolink">More Info</a>
+            </button>
           </div>
         </div>
+      </div>
       </div>
     </span>
-<!--  -->
-<!-- WEATHEER FOECAST -->
-<!--  -->
+    <!--  -->
+    <!-- WEATHEER FOECAST -->
+    <!--  -->
 
-<h1 id="weatherforcast" class="display-6 text-center mb-4">WEATHER FORCAST OF <span class="capitalname"> <span id="cityName4"></span> CITY </span></h1>
+    <h1 id="weatherforcast" class="display-6 text-center mb-4">WEATHER FORCAST OF <span class="capitalname"> <span
+          id="cityName4"></span> CITY </span></h1>
 
-<div class="allforcast">
+    <div class="allforcast">
 
-                                              <!-- 3dayclub#1 -->                                  
+      <!-- 3dayclub#1 -->
 
-   <div class="threedayclub">
-     <div class="onedayforcast">
-      <details>
-        <summary class="summary" id="summary">
-           <span class="summarywrap">
-             <sup>TODAY</sup> <span id="zeroforcastdate"></span> &nbsp &nbsp &nbsp
-             <img src="" id="zeroinnerimageicon2" alt="weather icon" class="summaryimage"><span id="zerosummarytemp"> 20</span><span>&#8451;</span> &nbsp&nbsp 
-             <span id="zerophrase1"></span>
-           </span>
-        </summary>  
-        <br>
-        <div class="inner">
-          <div class="imageandimageinfo">
-            <div class="innerimage">
-              <img id="zeroinnerimageicon1" src="" alt="weather image" class="innerimageicon" >
-            </div>
-            <div class="innerimageinfo">
-              <h4><span id="zerophrase2"></span> Sky</h4>
-              The <b>High</b> will be <b><span id="zeromaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will be <b><span id="zeromintemp1"></b></span><span>&#8451;</span>.
-            </div>
-          </div>
-          <br>
-          <div class="innersmallinfo">
-            <img src="imageicon/rainpct.png" alt="" class="innericon">  <span id="zerorainpct">4</span>% &nbsp &nbsp &nbsp &nbsp
-             <img src="imageicon/winddirection.png" alt="" class="innericon">    <span id="zerowindspeed">93</span> km/h &nbsp &nbsp &nbsp &nbsp <br>
-             <img src="imageicon/pressureicon.png" alt="" class="innericon">  <span id="zeropressure">1024</span>hPa<br>
-
-           <b>Max Humidity</b> : <span id="zerohumidity">27</span>% &nbsp &nbsp &nbsp &nbsp 
-           <b>UV Index</b> : <span id="zerouv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
-           <b>Dew Point</b> : <span id="zerodewpoint">23</span> <span>&#8451;</span> 
-          </div>
-          <br>
-          <table>
-            <thead>
-              <th style="width: 1%;">Sunrise</th>
-              <th style="width: 1%;">Sunset</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span id="zerosunrise"></span> IST</td>
-                <td><span id="zerosunset"></span> IST</td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-            <thead>
-              <th style="width: 1%;">Moonrise</th>
-              <th style="width: 1%;">Moonset</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span id="zeromoonrise"> </span> IST</td>
-                <td><span id="zeromoonset"></span> IST</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="innersunrisesetime"></div>
-        </div>
-      </details>
-     </div>
-
-     <div class="onedayforcast">
-      <details>
-        <summary class="summary" id="summary"> 
-          <span id="oneforcastdate"></span> &nbsp &nbsp &nbsp
-          <img src="" id="oneinnerimageicon2" alt="weather icon" class="summaryimage"> <span id="onesummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp 
-          <span id="onephrase1"></span>
-        </summary>  
-        <br>
-        <div class="inner">
-          <div class="imageandimageinfo">
-            <div class="innerimage">
-              <img id="oneinnerimageicon1" src="" alt="weather image" class="innerimageicon" >
-            </div>
-            <div class="innerimageinfo">
-              <h4><span id="onephrase2"></span> Sky</h4>
-              The <b>High</b> will be <b><span id="onemaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will be <b><span id="onemintemp1"></b></span><span>&#8451;</span>.
-            </div>
-          </div>
-          <br>
-          <div class="innersmallinfo">
-            <img src="imageicon/rainpct.png" alt="" class="innericon">  <span id="onerainpct">4</span>% &nbsp &nbsp &nbsp &nbsp
-             <img src="imageicon/winddirection.png" alt="" class="innericon">    <span id="onewindspeed">93</span> km/h &nbsp &nbsp &nbsp &nbsp  <br>
-             <img src="imageicon/pressureicon.png" alt="" class="innericon">  <span id="onepressure">1024</span>hPa<br>
-
-           <b>Max Humidity</b> : <span id="onehumidity">27</span>% &nbsp &nbsp &nbsp &nbsp 
-           <b>UV Index</b> : <span id="oneuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
-           <b>Dew Point</b> : <span id="onedewpoint">23</span> <span>&#8451;</span> 
-          </div>
-          <br>
-          <table>
-            <thead>
-              <th style="width: 1%;">Sunrise</th>
-              <th style="width: 1%;">Sunset</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span id="onesunrise"></span> IST</td>
-                <td><span id="onesunset"></span> IST</td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-            <thead>
-              <th style="width: 1%;">Moonrise</th>
-              <th style="width: 1%;">Moonset</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span id="onemoonrise"> </span> IST</td>
-                <td><span id="onemoonset"></span> IST</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="innersunrisesetime"></div>
-        </div>
-      </details>
-     </div>
-
-     <div class="onedayforcast">
-      <details>
-        <summary class="summary" id="summary"> 
-          <span id="twoforcastdate"></span> &nbsp &nbsp &nbsp
-          <img src="" id="twoinnerimageicon2" alt="weather icon" class="summaryimage"><span id="twosummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp 
-          <span id="twophrase1"></span>
-        </summary>  
-        <br>
-        <div class="inner">
-          <div class="imageandimageinfo">
-            <div class="innerimage">
-              <img id="twoinnerimageicon1" src="" alt="weather image" class="innerimageicon" >
-            </div>
-            <div class="innerimageinfo">
-              <h4><span id="twophrase2"></span> Sky</h4>
-              The <b>High</b> will be <b><span id="twomaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will be <b><span id="twomintemp1"></b></span><span>&#8451;</span>.
-            </div>
-          </div>
-          <br>
-          <div class="innersmallinfo">
-            <img src="imageicon/rainpct.png" alt="" class="innericon">  <span id="tworainpct">4</span>% &nbsp &nbsp &nbsp &nbsp
-             <img src="imageicon/winddirection.png" alt="" class="innericon">    <span id="twowindspeed">93</span> km/h &nbsp &nbsp &nbsp &nbsp  <br>
-             <img src="imageicon/pressureicon.png" alt="" class="innericon">  <span id="twopressure">1024</span>hPa<br>
-
-           <b>Max Humidity</b> : <span id="twohumidity">27</span>% &nbsp &nbsp &nbsp &nbsp 
-           <b>UV Index</b> : <span id="twouv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
-           <b>Dew Point</b> : <span id="twodewpoint">23</span> <span>&#8451;</span> 
-          </div>
-          <br>
-          <table>
-            <thead>
-              <th style="width: 1%;">Sunrise</th>
-              <th style="width: 1%;">Sunset</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span id="twosunrise"></span> IST</td>
-                <td><span id="twosunset"></span> IST</td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-            <thead>
-              <th style="width: 1%;">Moonrise</th>
-              <th style="width: 1%;">Moonset</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span id="twomoonrise"> </span> IST</td>
-                <td><span id="twomoonset"></span> IST</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="innersunrisesetime"></div>
-        </div>
-      </details>
-     </div>
-   </div>
-
-
-                                                                    <!-- 3dayclub#2 -->
-
-
-   <div class="threedayclub">
-
-    <div class="onedayforcast">
-     <details>
-       <summary class="summary" id="summary">
-         <span id="threeforcastdate"></span> &nbsp &nbsp &nbsp
-         <img src="" id="threeinnerimageicon2" alt="weather icon" class="summaryimage"><span id="threesummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp 
-         <span id="threephrase1"></span>
-       </summary>  
-       <br>
-       <div class="inner">
-         <div class="imageandimageinfo">
-           <div class="innerimage">
-             <img id="threeinnerimageicon1" src="" alt="weather image" class="innerimageicon" >
-           </div>
-           <div class="innerimageinfo">
-             <h4><span id="threephrase2"></span> Sky</h4>
-             The <b>High</b> will be <b><span id="threemaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will be <b><span id="threemintemp1"></b></span><span>&#8451;</span>.
-           </div>
-         </div>
-         <br>
-         <div class="innersmallinfo">
-           <img src="imageicon/rainpct.png" alt="" class="innericon">  <span id="threerainpct">4</span>% &nbsp &nbsp &nbsp &nbsp
-            <img src="imageicon/winddirection.png" alt="" class="innericon">    <span id="threewindspeed">93</span> km/h &nbsp &nbsp &nbsp &nbsp <br> 
-            <img src="imageicon/pressureicon.png" alt="" class="innericon">  <span id="threepressure">1024</span>hPa<br>
-
-          <b>Max Humidity</b> : <span id="threehumidity">27</span>% &nbsp &nbsp &nbsp &nbsp 
-          <b>UV Index</b> : <span id="threeuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
-          <b>Dew Point</b> : <span id="threedewpoint">23</span> <span>&#8451;</span> 
-         </div>
-         <br>
-         <table>
-           <thead>
-             <th style="width: 1%;">Sunrise</th>
-             <th style="width: 1%;">Sunset</th>
-           </thead>
-           <tbody>
-             <tr>
-               <td><span id="threesunrise"></span> IST</td>
-               <td><span id="threesunset"></span> IST</td>
-             </tr>
-           </tbody>
-         </table>
-         <table>
-           <thead>
-             <th style="width: 1%;">Moonrise</th>
-             <th style="width: 1%;">Moonset</th>
-           </thead>
-           <tbody>
-             <tr>
-               <td><span id="threemoonrise"> </span> IST</td>
-               <td><span id="threemoonset"></span> IST</td>
-             </tr>
-           </tbody>
-         </table>
-         <div class="innersunrisesetime"></div>
-       </div>
-     </details>
-    </div>
-
-    <div class="onedayforcast">
-     <details>
-       <summary class="summary" id="summary"> 
-         <span id="fourforcastdate"></span> &nbsp &nbsp &nbsp
-         <img src="" id="fourinnerimageicon2" alt="weather icon" class="summaryimage"><span id="foursummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp 
-         <span id="fourphrase1"></span>
-       </summary>  
-       <br>
-       <div class="inner">
-         <div class="imageandimageinfo">
-           <div class="innerimage">
-             <img id="fourinnerimageicon1" src="" alt="weather image" class="innerimageicon" >
-           </div>
-           <div class="innerimageinfo">
-             <h4><span id="fourphrase2"></span> Sky</h4>
-             The <b>High</b> will be <b><span id="fourmaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will be <b><span id="fourmintemp1"></b></span><span>&#8451;</span>.
-           </div>
-         </div>
-         <br>
-         <div class="innersmallinfo">
-           <img src="imageicon/rainpct.png" alt="" class="innericon">  <span id="fourrainpct">4</span>% &nbsp &nbsp &nbsp &nbsp
-            <img src="imageicon/winddirection.png" alt="" class="innericon">    <span id="fourwindspeed">93</span> km/h &nbsp &nbsp &nbsp &nbsp  <br>
-            <img src="imageicon/pressureicon.png" alt="" class="innericon">  <span id="fourpressure">1024</span>hPa<br>
-
-          <b>Max Humidity</b> : <span id="fourhumidity">27</span>% &nbsp &nbsp &nbsp &nbsp 
-          <b>UV Index</b> : <span id="fouruv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
-          <b>Dew Point</b> : <span id="fourdewpoint">23</span> <span>&#8451;</span> 
-         </div>
-         <br>
-         <table>
-           <thead>
-             <th style="width: 1%;">Sunrise</th>
-             <th style="width: 1%;">Sunset</th>
-           </thead>
-           <tbody>
-             <tr>
-               <td><span id="foursunrise"></span> IST</td>
-               <td><span id="foursunset"></span> IST</td>
-             </tr>
-           </tbody>
-         </table>
-         <table>
-           <thead>
-             <th style="width: 1%;">Moonrise</th>
-             <th style="width: 1%;">Moonset</th>
-           </thead>
-           <tbody>
-             <tr>
-               <td><span id="fourmoonrise"> </span> IST</td>
-               <td><span id="fourmoonset"></span> IST</td>
-             </tr>
-           </tbody>
-         </table>
-         <div class="innersunrisesetime"></div>
-       </div>
-     </details>
-    </div>
-
-    <div class="onedayforcast">
-     <details>
-       <summary class="summary" id="summary"> 
-         <span id="fiveforcastdate"></span> &nbsp &nbsp &nbsp
-         <img src="" id="fiveinnerimageicon2" alt="weather icon" class="summaryimage"><span id="fivesummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp 
-         <span id="fivephrase1"></span>
-       </summary>  
-       <br>
-       <div class="inner">
-         <div class="imageandimageinfo">
-           <div class="innerimage">
-             <img id="fiveinnerimageicon1" src="" alt="weather image" class="innerimageicon" >
-           </div>
-           <div class="innerimageinfo">
-             <h4><span id="fivephrase2"></span> Sky</h4>
-             The <b>High</b> will be <b><span id="fivemaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will be <b><span id="fivemintemp1"></b></span><span>&#8451;</span>.
-           </div>
-         </div>
-         <br>
-         <div class="innersmallinfo">
-           <img src="imageicon/rainpct.png" alt="" class="innericon">  <span id="fiverainpct">4</span>% &nbsp &nbsp &nbsp &nbsp
-            <img src="imageicon/winddirection.png" alt="" class="innericon">    <span id="fivewindspeed">93</span> km/h &nbsp &nbsp &nbsp &nbsp  <br>
-            <img src="imageicon/pressureicon.png" alt="" class="innericon">  <span id="fivepressure">1024</span>hPa<br>
-
-          <b>Max Humidity</b> : <span id="fivehumidity">27</span>% &nbsp &nbsp &nbsp &nbsp 
-          <b>UV Index</b> : <span id="fiveuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
-          <b>Dew Point</b> : <span id="fivedewpoint">23</span> <span>&#8451;</span> 
-         </div>
-         <br>
-         <table>
-           <thead>
-             <th style="width: 1%;">Sunrise</th>
-             <th style="width: 1%;">Sunset</th>
-           </thead>
-           <tbody>
-             <tr>
-               <td><span id="fivesunrise"></span> IST</td>
-               <td><span id="fivesunset"></span> IST</td>
-             </tr>
-           </tbody>
-         </table>
-         <table>
-           <thead>
-             <th style="width: 1%;">Moonrise</th>
-             <th style="width: 1%;">Moonset</th>
-           </thead>
-           <tbody>
-             <tr>
-               <td><span id="fivemoonrise"> </span> IST</td>
-               <td><span id="fivemoonset"></span> IST</td>
-             </tr>
-           </tbody>
-         </table>
-         <div class="innersunrisesetime"></div>
-       </div>
-     </details>
-    </div>
-
-  </div>
-
-       <!-- 2day club -->
-
-    <div class="twodayclub">
-
-      <div class="onedayforcast">
-        <details>
-          <summary class="summary" id="summary"> 
-            <span id="sixforcastdate"></span> &nbsp &nbsp &nbsp
-            <img src="" id="sixinnerimageicon2" alt="weather icon" class="summaryimage"><span id="sixsummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp 
-            <span id="sixphrase1"></span>
-          </summary>  
-          <br>
-          <div class="inner">
-            <div class="imageandimageinfo">
-              <div class="innerimage">
-                <img id="sixinnerimageicon1" src="" alt="weather image" class="innerimageicon" >
-              </div>
-              <div class="innerimageinfo">
-                <h4><span id="sixphrase2"></span> Sky</h4>
-                The <b>High</b> will be <b><span id="sixmaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will be <b><span id="sixmintemp1"></b></span><span>&#8451;</span>.
-              </div>
-            </div>
+      <div class="threedayclub">
+        <div class="onedayforcast">
+          <details>
+            <summary class="summary" id="summary">
+              <span class="summarywrap">
+                <sup>TODAY</sup> <span id="zeroforcastdate"></span> &nbsp &nbsp &nbsp
+                <img src="" id="zeroinnerimageicon2" alt="weather icon" class="summaryimage"><span id="zerosummarytemp">
+                  20</span><span>&#8451;</span> &nbsp&nbsp
+                <span id="zerophrase1"></span>
+              </span>
+            </summary>
             <br>
-            <div class="innersmallinfo">
-              <img src="imageicon/rainpct.png" alt="" class="innericon">  <span id="sixrainpct">4</span>% &nbsp &nbsp &nbsp &nbsp
-               <img src="imageicon/winddirection.png" alt="" class="innericon">    <span id="sixwindspeed">93</span> km/h &nbsp &nbsp &nbsp &nbsp  <br>
-               <img src="imageicon/pressureicon.png" alt="" class="innericon">  <span id="sixpressure">1024</span>hPa<br>
-   
-             <b>Max Humidity</b> : <span id="sixhumidity">27</span>% &nbsp &nbsp &nbsp &nbsp 
-             <b>UV Index</b> : <span id="sixuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
-             <b>Dew Point</b> : <span id="sixdewpoint">23</span> <span>&#8451;</span> 
+            <div class="inner">
+              <div class="imageandimageinfo">
+                <div class="innerimage">
+                  <img id="zeroinnerimageicon1" src="" alt="weather image" class="innerimageicon">
+                </div>
+                <div class="innerimageinfo">
+                  <h4><span id="zerophrase2"></span> Sky</h4>
+                  The <b>High</b> will be <b><span id="zeromaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will
+                  be <b><span id="zeromintemp1"></b></span><span>&#8451;</span>.
+                </div>
+              </div>
+              <br>
+              <div class="innersmallinfo">
+                <img src="imageicon/rainpct.png" alt="" class="innericon"> <span id="zerorainpct">4</span>% &nbsp &nbsp
+                &nbsp &nbsp
+                <img src="imageicon/winddirection.png" alt="" class="innericon"> <span id="zerowindspeed">93</span> km/h
+                &nbsp &nbsp &nbsp &nbsp <br>
+                <img src="imageicon/pressureicon.png" alt="" class="innericon"> <span
+                  id="zeropressure">1024</span>hPa<br>
+
+                <b>Max Humidity</b> : <span id="zerohumidity">27</span>% &nbsp &nbsp &nbsp &nbsp
+                <b>UV Index</b> : <span id="zerouv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
+                <b>Dew Point</b> : <span id="zerodewpoint">23</span> <span>&#8451;</span>
+              </div>
+              <br>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Sunrise</th>
+                  <th style="width: 1%;">Sunset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="zerosunrise"></span> IST</td>
+                    <td><span id="zerosunset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Moonrise</th>
+                  <th style="width: 1%;">Moonset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="zeromoonrise"> </span> IST</td>
+                    <td><span id="zeromoonset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="innersunrisesetime"></div>
             </div>
+          </details>
+        </div>
+
+        <div class="onedayforcast">
+          <details>
+            <summary class="summary" id="summary">
+              <span id="oneforcastdate"></span> &nbsp &nbsp &nbsp
+              <img src="" id="oneinnerimageicon2" alt="weather icon" class="summaryimage"> <span
+                id="onesummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp
+              <span id="onephrase1"></span>
+            </summary>
             <br>
-            <table>
-              <thead>
-                <th style="width: 1%;">Sunrise</th>
-                <th style="width: 1%;">Sunset</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span id="sixsunrise"></span> IST</td>
-                  <td><span id="sixsunset"></span> IST</td>
-                </tr>
-              </tbody>
-            </table>
-            <table>
-              <thead>
-                <th style="width: 1%;">Moonrise</th>
-                <th style="width: 1%;">Moonset</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span id="sixmoonrise"> </span> IST</td>
-                  <td><span id="sixmoonset"></span> IST</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="innersunrisesetime"></div>
-          </div>
-        </details>
-       </div>
+            <div class="inner">
+              <div class="imageandimageinfo">
+                <div class="innerimage">
+                  <img id="oneinnerimageicon1" src="" alt="weather image" class="innerimageicon">
+                </div>
+                <div class="innerimageinfo">
+                  <h4><span id="onephrase2"></span> Sky</h4>
+                  The <b>High</b> will be <b><span id="onemaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will
+                  be <b><span id="onemintemp1"></b></span><span>&#8451;</span>.
+                </div>
+              </div>
+              <br>
+              <div class="innersmallinfo">
+                <img src="imageicon/rainpct.png" alt="" class="innericon"> <span id="onerainpct">4</span>% &nbsp &nbsp
+                &nbsp &nbsp
+                <img src="imageicon/winddirection.png" alt="" class="innericon"> <span id="onewindspeed">93</span> km/h
+                &nbsp &nbsp &nbsp &nbsp <br>
+                <img src="imageicon/pressureicon.png" alt="" class="innericon"> <span
+                  id="onepressure">1024</span>hPa<br>
 
-     <div class="onedayforcast">
-     <details>
-       <summary class="summary" id="summary"> 
-         <span id="sevenforcastdate"></span> &nbsp &nbsp &nbsp
-         <img src="" id="seveninnerimageicon2" alt="weather icon" class="summaryimage"><span id="sevensummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp 
-         <span id="sevenphrase1"></span>
-       </summary>  
-       <br>
-       <div class="inner">
-         <div class="imageandimageinfo">
-           <div class="innerimage">
-             <img id="seveninnerimageicon1" src="" alt="weather image" class="innerimageicon" >
-           </div>
-           <div class="innerimageinfo">
-             <h4><span id="sevenphrase2"></span> Sky</h4>
-             The <b>High</b> will be <b><span id="sevenmaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will be <b><span id="sevenmintemp1"></b></span><span>&#8451;</span>.
-           </div>
-         </div>
-         <br>
-         <div class="innersmallinfo">
-           <img src="imageicon/rainpct.png" alt="" class="innericon">  <span id="sevenrainpct">4</span>% &nbsp &nbsp &nbsp &nbsp
-            <img src="imageicon/winddirection.png" alt="" class="innericon">    <span id="sevenwindspeed">93</span> km/h &nbsp &nbsp &nbsp &nbsp  <br>
-            <img src="imageicon/pressureicon.png" alt="" class="innericon">  <span id="sevenpressure">1024</span>hPa<br>
+                <b>Max Humidity</b> : <span id="onehumidity">27</span>% &nbsp &nbsp &nbsp &nbsp
+                <b>UV Index</b> : <span id="oneuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
+                <b>Dew Point</b> : <span id="onedewpoint">23</span> <span>&#8451;</span>
+              </div>
+              <br>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Sunrise</th>
+                  <th style="width: 1%;">Sunset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="onesunrise"></span> IST</td>
+                    <td><span id="onesunset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Moonrise</th>
+                  <th style="width: 1%;">Moonset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="onemoonrise"> </span> IST</td>
+                    <td><span id="onemoonset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="innersunrisesetime"></div>
+            </div>
+          </details>
+        </div>
 
-          <b>Max Humidity</b> : <span id="sevenhumidity">27</span>% &nbsp &nbsp &nbsp &nbsp 
-          <b>UV Index</b> : <span id="sevenuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
-          <b>Dew Point</b> : <span id="sevendewpoint">23</span> <span>&#8451;</span> 
-         </div>
-         <br>
-         <table>
-           <thead>
-             <th style="width: 1%;">Sunrise</th>
-             <th style="width: 1%;">Sunset</th>
-           </thead>
-           <tbody>
-             <tr>
-               <td><span id="sevensunrise"></span> IST</td>
-               <td><span id="sevensunset"></span> IST</td>
-             </tr>
-           </tbody>
-         </table>
-         <table>
-           <thead>
-             <th style="width: 1%;">Moonrise</th>
-             <th style="width: 1%;">Moonset</th>
-           </thead>
-           <tbody>
-             <tr>
-               <td><span id="sevenmoonrise"> </span> IST</td>
-               <td><span id="sevenmoonset"></span> IST</td>
-             </tr>
-           </tbody>
-         </table>
-         <div class="innersunrisesetime"></div>
-       </div>
-     </details>
-    </div>
+        <div class="onedayforcast">
+          <details>
+            <summary class="summary" id="summary">
+              <span id="twoforcastdate"></span> &nbsp &nbsp &nbsp
+              <img src="" id="twoinnerimageicon2" alt="weather icon" class="summaryimage"><span
+                id="twosummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp
+              <span id="twophrase1"></span>
+            </summary>
+            <br>
+            <div class="inner">
+              <div class="imageandimageinfo">
+                <div class="innerimage">
+                  <img id="twoinnerimageicon1" src="" alt="weather image" class="innerimageicon">
+                </div>
+                <div class="innerimageinfo">
+                  <h4><span id="twophrase2"></span> Sky</h4>
+                  The <b>High</b> will be <b><span id="twomaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will
+                  be <b><span id="twomintemp1"></b></span><span>&#8451;</span>.
+                </div>
+              </div>
+              <br>
+              <div class="innersmallinfo">
+                <img src="imageicon/rainpct.png" alt="" class="innericon"> <span id="tworainpct">4</span>% &nbsp &nbsp
+                &nbsp &nbsp
+                <img src="imageicon/winddirection.png" alt="" class="innericon"> <span id="twowindspeed">93</span> km/h
+                &nbsp &nbsp &nbsp &nbsp <br>
+                <img src="imageicon/pressureicon.png" alt="" class="innericon"> <span
+                  id="twopressure">1024</span>hPa<br>
 
-
-   </div>
-   
-
-
-</div>
- 
-
-<br><br>
-
-
-
-<!--  -->
-<!-- TEMP TABLE -->
-<!--  -->
-      <h1 id="compareweather" class="display-6 text-center mb-4">COMPARE WEATHER OF SIMILAR PLACES</h1>
-
-      <div class="table-responsive">
-        <table class="table text-center">
-          <thead>
-            <tr>
-              <th style="width: 9.1%">City</th>
-              <th style="width: 9.1%">Cloud Cover</th>
-              <th style="width: 9.1%">Feels Like</th>
-              <th style="width: 9.1%">Humidity</th>
-              <th style="width: 9.1%">Max Temp</th>
-              <th style="width: 9.1%">Min Temp</th>
-              <th style="width: 9.1%">Sunrise</th>
-              <th style="width: 9.1%">Sunset</th>
-              <th style="width: 9.1%">Temp</th>
-              <th style="width: 9.1%">Wind Direction</th>
-              <th style="width: 9.1%">Wind Speed</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr id="customcityrow">
-              <th scope="row"  id="cityName2"><span class="capitalname">X</span></th>
-              <td><span id="cloud_pct2">0</span>%</td>
-              <td><span id="feels_like2">0</span><span>&#8451;</span></td>
-              <td><span id="humidity3">0</span>%</td>
-              <td><span id="max_temp2">0</span><span>&#8451;</span></td>
-              <td><span id="min_temp2">0</span><span>&#8451;</span></td>
-              <td><span id="sunrise2">0</span> IST</td>
-              <td><span id="sunset2">0</span> IST</td>
-              <td><span id="temp3">0</span><span>&#8451;</span></td>
-              <td><span id="wind_degrees2">0</span>°</td>
-              <td><span id="wind_speed3">0</span>m/s</td>
-            </tr>
-            <tr>
-              <th scope="row" >PUNE</th>
-              <td><span id="pune_cloud_pct">0</span>%</td>
-              <td><span id="pune_feels_like">0</span><span>&#8451;</span></td>
-              <td><span id="pune_humidity">0</span>%</td>
-              <td><span id="pune_max_temp">0</span><span>&#8451;</span></td>
-              <td><span id="pune_min_temp">0</span><span>&#8451;</span></td>
-              <td><span id="pune_sunrise">0</span> IST</td>
-              <td><span id="pune_sunset">0</span> IST</td>
-              <td><span id="pune_temp">0</span><span>&#8451;</span></td>
-              <td><span id="pune_wind_degrees">0</span>°</td>
-              <td><span id="pune_wind_speed">0</span>m/s</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="row" >BANGALORE</th>
-              <td><span id="bangalore_cloud_pct">0</span>%</td>
-              <td><span id="bangalore_feels_like">0</span><span>&#8451;</span></td>
-              <td><span id="bangalore_humidity">0</span>%</td>
-              <td><span id="bangalore_max_temp">0</span><span>&#8451;</span></td>
-              <td><span id="bangalore_min_temp">0</span><span>&#8451;</span></td>
-              <td><span id="bangalore_sunrise">0</span> IST</td>
-              <td><span id="bangalore_sunset">0</span> IST</td>
-              <td><span id="bangalore_temp">0</span><span>&#8451;</span></td>
-              <td><span id="bangalore_wind_degrees">0</span>°</td>
-              <td><span id="bangalore_wind_speed">0</span>m/s</td>
-            </tr>
-            <tr>
-              <th scope="row" >KOLKATA</th>
-              <td><span id="kolkata_cloud_pct">0</span>%</td>
-              <td><span id="kolkata_feels_like">0</span><span>&#8451;</span></td>
-              <td><span id="kolkata_humidity">0</span>%</td>
-              <td><span id="kolkata_max_temp">0</span><span>&#8451;</span></td>
-              <td><span id="kolkata_min_temp">0</span><span>&#8451;</span></td>
-              <td><span id="kolkata_sunrise">0</span> IST</td>
-              <td><span id="kolkata_sunset">0</span> IST</td>
-              <td><span id="kolkata_temp">0</span><span>&#8451;</span></td>
-              <td><span id="kolkata_wind_degrees">0</span>°</td>
-              <td><span id="kolkata_wind_speed">0</span>m/s</td>
-            </tr>
-            <tr>
-              <th scope="row">DELHI</th>
-              <td><span id="delhi_cloud_pct">0</span>%</td>
-              <td><span id="delhi_feels_like">0</span><span>&#8451;</span></td>
-              <td><span id="delhi_humidity">0</span>%</td>
-              <td><span id="delhi_max_temp">0</span><span>&#8451;</span></td>
-              <td><span id="delhi_min_temp">0</span><span>&#8451;</span></td>
-              <td><span id="delhi_sunrise">0</span>  IST</td>
-              <td><span id="delhi_sunset">0</span> IST</td>
-              <td><span id="delhi_temp">0</span><span>&#8451;</span></td>
-              <td><span id="delhi_wind_degrees">0</span>°</td>
-              <td><span id="delhi_wind_speed">0</span>m/s</td>
-            </tr>
-            <tr>
-              <th scope="row">BHOPAL</th>
-              <td><span id="bhopal_cloud_pct">0</span>%</td>
-              <td><span id="bhopal_feels_like">0</span><span>&#8451;</span></td>
-              <td><span id="bhopal_humidity">0</span>%</td>
-              <td><span id="bhopal_max_temp">0</span><span>&#8451;</span></td>
-              <td><span id="bhopal_min_temp">0</span><span>&#8451;</span></td>
-              <td><span id="bhopal_sunrise">0</span> IST</td>
-              <td><span id="bhopal_sunset">0</span> IST</td>
-              <td><span id="bhopal_temp">0</span><span>&#8451;</span></td>
-              <td><span id="bhopal_wind_degrees">0</span>°</td>
-              <td><span id="bhopal_wind_speed">0</span>m/s</td>
-            </tr>
-          </tbody>
-        </table>
+                <b>Max Humidity</b> : <span id="twohumidity">27</span>% &nbsp &nbsp &nbsp &nbsp
+                <b>UV Index</b> : <span id="twouv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
+                <b>Dew Point</b> : <span id="twodewpoint">23</span> <span>&#8451;</span>
+              </div>
+              <br>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Sunrise</th>
+                  <th style="width: 1%;">Sunset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="twosunrise"></span> IST</td>
+                    <td><span id="twosunset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Moonrise</th>
+                  <th style="width: 1%;">Moonset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="twomoonrise"> </span> IST</td>
+                    <td><span id="twomoonset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="innersunrisesetime"></div>
+            </div>
+          </details>
+        </div>
       </div>
 
-      <br><br><br>
+
+      <!-- 3dayclub#2 -->
+
+
+      <div class="threedayclub">
+
+        <div class="onedayforcast">
+          <details>
+            <summary class="summary" id="summary">
+              <span id="threeforcastdate"></span> &nbsp &nbsp &nbsp
+              <img src="" id="threeinnerimageicon2" alt="weather icon" class="summaryimage"><span
+                id="threesummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp
+              <span id="threephrase1"></span>
+            </summary>
+            <br>
+            <div class="inner">
+              <div class="imageandimageinfo">
+                <div class="innerimage">
+                  <img id="threeinnerimageicon1" src="" alt="weather image" class="innerimageicon">
+                </div>
+                <div class="innerimageinfo">
+                  <h4><span id="threephrase2"></span> Sky</h4>
+                  The <b>High</b> will be <b><span id="threemaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b>
+                  will be <b><span id="threemintemp1"></b></span><span>&#8451;</span>.
+                </div>
+              </div>
+              <br>
+              <div class="innersmallinfo">
+                <img src="imageicon/rainpct.png" alt="" class="innericon"> <span id="threerainpct">4</span>% &nbsp &nbsp
+                &nbsp &nbsp
+                <img src="imageicon/winddirection.png" alt="" class="innericon"> <span id="threewindspeed">93</span>
+                km/h &nbsp &nbsp &nbsp &nbsp <br>
+                <img src="imageicon/pressureicon.png" alt="" class="innericon"> <span
+                  id="threepressure">1024</span>hPa<br>
+
+                <b>Max Humidity</b> : <span id="threehumidity">27</span>% &nbsp &nbsp &nbsp &nbsp
+                <b>UV Index</b> : <span id="threeuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
+                <b>Dew Point</b> : <span id="threedewpoint">23</span> <span>&#8451;</span>
+              </div>
+              <br>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Sunrise</th>
+                  <th style="width: 1%;">Sunset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="threesunrise"></span> IST</td>
+                    <td><span id="threesunset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Moonrise</th>
+                  <th style="width: 1%;">Moonset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="threemoonrise"> </span> IST</td>
+                    <td><span id="threemoonset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="innersunrisesetime"></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="onedayforcast">
+          <details>
+            <summary class="summary" id="summary">
+              <span id="fourforcastdate"></span> &nbsp &nbsp &nbsp
+              <img src="" id="fourinnerimageicon2" alt="weather icon" class="summaryimage"><span
+                id="foursummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp
+              <span id="fourphrase1"></span>
+            </summary>
+            <br>
+            <div class="inner">
+              <div class="imageandimageinfo">
+                <div class="innerimage">
+                  <img id="fourinnerimageicon1" src="" alt="weather image" class="innerimageicon">
+                </div>
+                <div class="innerimageinfo">
+                  <h4><span id="fourphrase2"></span> Sky</h4>
+                  The <b>High</b> will be <b><span id="fourmaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will
+                  be <b><span id="fourmintemp1"></b></span><span>&#8451;</span>.
+                </div>
+              </div>
+              <br>
+              <div class="innersmallinfo">
+                <img src="imageicon/rainpct.png" alt="" class="innericon"> <span id="fourrainpct">4</span>% &nbsp &nbsp
+                &nbsp &nbsp
+                <img src="imageicon/winddirection.png" alt="" class="innericon"> <span id="fourwindspeed">93</span> km/h
+                &nbsp &nbsp &nbsp &nbsp <br>
+                <img src="imageicon/pressureicon.png" alt="" class="innericon"> <span
+                  id="fourpressure">1024</span>hPa<br>
+
+                <b>Max Humidity</b> : <span id="fourhumidity">27</span>% &nbsp &nbsp &nbsp &nbsp
+                <b>UV Index</b> : <span id="fouruv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
+                <b>Dew Point</b> : <span id="fourdewpoint">23</span> <span>&#8451;</span>
+              </div>
+              <br>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Sunrise</th>
+                  <th style="width: 1%;">Sunset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="foursunrise"></span> IST</td>
+                    <td><span id="foursunset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Moonrise</th>
+                  <th style="width: 1%;">Moonset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="fourmoonrise"> </span> IST</td>
+                    <td><span id="fourmoonset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="innersunrisesetime"></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="onedayforcast">
+          <details>
+            <summary class="summary" id="summary">
+              <span id="fiveforcastdate"></span> &nbsp &nbsp &nbsp
+              <img src="" id="fiveinnerimageicon2" alt="weather icon" class="summaryimage"><span
+                id="fivesummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp
+              <span id="fivephrase1"></span>
+            </summary>
+            <br>
+            <div class="inner">
+              <div class="imageandimageinfo">
+                <div class="innerimage">
+                  <img id="fiveinnerimageicon1" src="" alt="weather image" class="innerimageicon">
+                </div>
+                <div class="innerimageinfo">
+                  <h4><span id="fivephrase2"></span> Sky</h4>
+                  The <b>High</b> will be <b><span id="fivemaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will
+                  be <b><span id="fivemintemp1"></b></span><span>&#8451;</span>.
+                </div>
+              </div>
+              <br>
+              <div class="innersmallinfo">
+                <img src="imageicon/rainpct.png" alt="" class="innericon"> <span id="fiverainpct">4</span>% &nbsp &nbsp
+                &nbsp &nbsp
+                <img src="imageicon/winddirection.png" alt="" class="innericon"> <span id="fivewindspeed">93</span> km/h
+                &nbsp &nbsp &nbsp &nbsp <br>
+                <img src="imageicon/pressureicon.png" alt="" class="innericon"> <span
+                  id="fivepressure">1024</span>hPa<br>
+
+                <b>Max Humidity</b> : <span id="fivehumidity">27</span>% &nbsp &nbsp &nbsp &nbsp
+                <b>UV Index</b> : <span id="fiveuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
+                <b>Dew Point</b> : <span id="fivedewpoint">23</span> <span>&#8451;</span>
+              </div>
+              <br>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Sunrise</th>
+                  <th style="width: 1%;">Sunset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="fivesunrise"></span> IST</td>
+                    <td><span id="fivesunset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Moonrise</th>
+                  <th style="width: 1%;">Moonset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="fivemoonrise"> </span> IST</td>
+                    <td><span id="fivemoonset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="innersunrisesetime"></div>
+            </div>
+          </details>
+        </div>
+
+      </div>
+
+      <!-- 2day club -->
+
+      <div class="twodayclub">
+
+        <div class="onedayforcast">
+          <details>
+            <summary class="summary" id="summary">
+              <span id="sixforcastdate"></span> &nbsp &nbsp &nbsp
+              <img src="" id="sixinnerimageicon2" alt="weather icon" class="summaryimage"><span
+                id="sixsummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp
+              <span id="sixphrase1"></span>
+            </summary>
+            <br>
+            <div class="inner">
+              <div class="imageandimageinfo">
+                <div class="innerimage">
+                  <img id="sixinnerimageicon1" src="" alt="weather image" class="innerimageicon">
+                </div>
+                <div class="innerimageinfo">
+                  <h4><span id="sixphrase2"></span> Sky</h4>
+                  The <b>High</b> will be <b><span id="sixmaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b> will
+                  be <b><span id="sixmintemp1"></b></span><span>&#8451;</span>.
+                </div>
+              </div>
+              <br>
+              <div class="innersmallinfo">
+                <img src="imageicon/rainpct.png" alt="" class="innericon"> <span id="sixrainpct">4</span>% &nbsp &nbsp
+                &nbsp &nbsp
+                <img src="imageicon/winddirection.png" alt="" class="innericon"> <span id="sixwindspeed">93</span> km/h
+                &nbsp &nbsp &nbsp &nbsp <br>
+                <img src="imageicon/pressureicon.png" alt="" class="innericon"> <span
+                  id="sixpressure">1024</span>hPa<br>
+
+                <b>Max Humidity</b> : <span id="sixhumidity">27</span>% &nbsp &nbsp &nbsp &nbsp
+                <b>UV Index</b> : <span id="sixuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
+                <b>Dew Point</b> : <span id="sixdewpoint">23</span> <span>&#8451;</span>
+              </div>
+              <br>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Sunrise</th>
+                  <th style="width: 1%;">Sunset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="sixsunrise"></span> IST</td>
+                    <td><span id="sixsunset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Moonrise</th>
+                  <th style="width: 1%;">Moonset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="sixmoonrise"> </span> IST</td>
+                    <td><span id="sixmoonset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="innersunrisesetime"></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="onedayforcast">
+          <details>
+            <summary class="summary" id="summary">
+              <span id="sevenforcastdate"></span> &nbsp &nbsp &nbsp
+              <img src="" id="seveninnerimageicon2" alt="weather icon" class="summaryimage"><span
+                id="sevensummarytemp">20</span><span>&#8451;</span> &nbsp&nbsp
+              <span id="sevenphrase1">
+            </summary>
+            <br>
+            <div class="inner">
+              <div class="imageandimageinfo">
+                <div class="innerimage">
+                  <img id="seveninnerimageicon1" src="" alt="weather image" class="innerimageicon">
+                </div>
+                <div class="innerimageinfo">
+                  <h4><span id="sevenphrase2"></span> Sky</h4>
+                  The <b>High</b> will be <b><span id="sevenmaxtemp1"></b></span><span>&#8451;</span>,The <b>Low</b>
+                  will be <b><span id="sevenmintemp1"></b></span><span>&#8451;</span>.
+                </div>
+              </div>
+              <br>
+              <div class="innersmallinfo">
+                <img src="imageicon/rainpct.png" alt="" class="innericon"> <span id="sevenrainpct">4</span>% &nbsp &nbsp
+                &nbsp &nbsp
+                <img src="imageicon/winddirection.png" alt="" class="innericon"> <span id="sevenwindspeed">93</span>
+                km/h &nbsp &nbsp &nbsp &nbsp <br>
+                <img src="imageicon/pressureicon.png" alt="" class="innericon"> <span
+                  id="sevenpressure">1024</span>hPa<br>
+
+                <b>Max Humidity</b> : <span id="sevenhumidity">27</span>% &nbsp &nbsp &nbsp &nbsp
+                <b>UV Index</b> : <span id="sevenuv">11</span> &nbsp &nbsp &nbsp &nbsp <br>
+                <b>Dew Point</b> : <span id="sevendewpoint">23</span> <span>&#8451;</span>
+              </div>
+              <br>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Sunrise</th>
+                  <th style="width: 1%;">Sunset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="sevensunrise"></span> IST</td>
+                    <td><span id="sevensunset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <th style="width: 1%;">Moonrise</th>
+                  <th style="width: 1%;">Moonset</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="sevenmoonrise"> </span> IST</td>
+                    <td><span id="sevenmoonset"></span> IST</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="innersunrisesetime"></div>
+            </div>
+          </details>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+
+    <br><br>
+
+
+
     <!--  -->
-    <h1 class="display-6 text-center mb-4">COMPARE AIR QUALITY INDEX OF SIMILAR PLACES  </h1>
+    <!-- TEMP TABLE -->
+    <!--  -->
+    <h1 id="compareweather" class="display-6 text-center mb-4">COMPARE WEATHER OF SIMILAR PLACES</h1>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 9.1%">City</th>
+            <th style="width: 9.1%">Cloud Cover</th>
+            <th style="width: 9.1%">Feels Like</th>
+            <th style="width: 9.1%">Humidity</th>
+            <th style="width: 9.1%">Condition</th>
+            <th style="width: 9.1%">Thunder prob.</th>
+            <th style="width: 9.1%">Dew Point</th>
+            <th style="width: 9.1%">Precip. Prob.</th>
+            <th style="width: 9.1%">Temp</th>
+            <th style="width: 9.1%">Wind Direction</th>
+            <th style="width: 9.1%">Wind Speed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="customcityrow">
+            <th scope="row" id="cityName2"><span class="capitalname">X</span></th>
+            <td><span id="cloud_pct2">0</span>%</td>
+            <td><span id="feels_like2">0</span><span>&#8451;</span></td>
+            <td><span id="humidity3">0</span>%</td>
+            <td><span id="max_temp2">0</span><span></span></td>
+            <td><span id="min_temp2">0</span><span>%</span></td>
+            <td><span id="sunrise2">0</span> °C</td>
+            <td><span id="sunset2">0</span> %</td>
+            <td><span id="temp3">0</span><span>&#8451;</span></td>
+            <td><span id="wind_degrees2">0°</span></td>
+            <td><span id="wind_speed3">0</span>m/s</td>
+          </tr>
+          <tr>
+            <th scope="row">PUNE</th>
+            <td><span id="pune_cloud_pct">0</span>%</td>
+            <td><span id="pune_feels_like">0</span><span>&#8451;</span></td>
+            <td><span id="pune_humidity">0</span>%</td>
+            <td><span id="pune_max_temp">0</span><span></span></td>
+            <td><span id="pune_min_temp">0</span><span>%</span></td>
+            <td><span id="pune_sunrise">0</span> °C</td>
+            <td><span id="pune_sunset">0</span> %</td>
+            <td><span id="pune_temp">0</span><span>&#8451;</span></td>
+            <td><span id="pune_wind_degrees">0°</span></td>
+            <td><span id="pune_wind_speed">0</span>m/s</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">BANGALORE</th>
+            <td><span id="bangalore_cloud_pct">0</span>%</td>
+            <td><span id="bangalore_feels_like">0</span><span>&#8451;</span></td>
+            <td><span id="bangalore_humidity">0</span>%</td>
+            <td><span id="bangalore_max_temp">0</span><span></span></td>
+            <td><span id="bangalore_min_temp">0</span><span>%</span></td>
+            <td><span id="bangalore_sunrise">0</span> °C</td>
+            <td><span id="bangalore_sunset">0</span> %</td>
+            <td><span id="bangalore_temp">0</span><span>&#8451;</span></td>
+            <td><span id="bangalore_wind_degrees">0°</span></td>
+            <td><span id="bangalore_wind_speed">0</span>m/s</td>
+          </tr>
+          <tr>
+            <th scope="row">KOLKATA</th>
+            <td><span id="kolkata_cloud_pct">0</span>%</td>
+            <td><span id="kolkata_feels_like">0</span><span>&#8451;</span></td>
+            <td><span id="kolkata_humidity">0</span>%</td>
+            <td><span id="kolkata_max_temp">0</span><span></span></td>
+            <td><span id="kolkata_min_temp">0</span><span>%</span></td>
+            <td><span id="kolkata_sunrise">0</span> °C</td>
+            <td><span id="kolkata_sunset">0</span> %</td>
+            <td><span id="kolkata_temp">0</span><span>&#8451;</span></td>
+            <td><span id="kolkata_wind_degrees">0°</span></td>
+            <td><span id="kolkata_wind_speed">0</span>m/s</td>
+          </tr>
+          <tr>
+            <th scope="row">DELHI</th>
+            <td><span id="delhi_cloud_pct">0</span>%</td>
+            <td><span id="delhi_feels_like">0</span><span>&#8451;</span></td>
+            <td><span id="delhi_humidity">0</span>%</td>
+            <td><span id="delhi_max_temp">0</span><span></span></td>
+            <td><span id="delhi_min_temp">0</span><span>%</span></td>
+            <td><span id="delhi_sunrise">0</span> °C</td>
+            <td><span id="delhi_sunset">0</span> %</td>
+            <td><span id="delhi_temp">0</span><span>&#8451;</span></td>
+            <td><span id="delhi_wind_degrees">0°</span></td>
+            <td><span id="delhi_wind_speed">0</span>m/s</td>
+          </tr>
+          <tr>
+            <th scope="row">BHOPAL</th>
+            <td><span id="bhopal_cloud_pct">0</span>%</td>
+            <td><span id="bhopal_feels_like">0</span><span>&#8451;</span></td>
+            <td><span id="bhopal_humidity">0</span>%</td>
+            <td><span id="bhopal_max_temp">0</span><span></span></td>
+            <td><span id="bhopal_min_temp">0</span><span>%</span></td>
+            <td><span id="bhopal_sunrise">0</span> °C</td>
+            <td><span id="bhopal_sunset">0</span> %</td>
+            <td><span id="bhopal_temp">0</span><span>&#8451;</span></td>
+            <td><span id="bhopal_wind_degrees">0°</span></td>
+            <td><span id="bhopal_wind_speed">0</span>m/s</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br><br><br>
+    <!--  -->
+    <h1 class="display-6 text-center mb-4">COMPARE AIR QUALITY INDEX OF SIMILAR PLACES </h1>
     <!--  -->
     <!-- AIR QUAILITY INDEX TABLE  -->
     <!--  -->
@@ -790,7 +809,7 @@
         </thead>
         <tbody>
           <tr id="customcityrow">
-            <th scope="row"  id="cityName3">X</th>
+            <th scope="row" id="cityName3">X</th>
             <td>Concentration:<span id="custom_CO">0</span> ppm <br> AQI:<span id="custom_COaqi">0</span></td>
             <td>Concentration:<span id="custom_NO2">0</span> ppm <br> AQI:<span id="custom_NO2aqi">0</span></td>
             <td>Concentration:<span id="custom_O3">0</span> ppm <br> AQI:<span id="custom_O3aqi">0</span></td>
@@ -800,7 +819,7 @@
             <td><span id="custom_overall_aqi">0</span></td>
           </tr>
           <tr>
-            <th scope="row" >PUNE</th>
+            <th scope="row">PUNE</th>
             <td>Concentration:<span id="pune_CO">0</span> ppm <br> AQI:<span id="pune_COaqi">0</span></td>
             <td>Concentration:<span id="pune_NO2">0</span> ppm <br> AQI:<span id="pune_NO2aqi">0</span></td>
             <td>Concentration:<span id="pune_O3">0</span> ppm <br> AQI:<span id="pune_O3aqi">0</span></td>
@@ -812,7 +831,7 @@
         </tbody>
         <tbody>
           <tr>
-            <th scope="row" >BANGALORE</th>
+            <th scope="row">BANGALORE</th>
             <td>Concentration:<span id="bangalore_CO">0</span> ppm <br> AQI:<span id="bangalore_COaqi">0</span></td>
             <td>Concentration:<span id="bangalore_NO2">0</span> ppm <br> AQI:<span id="bangalore_NO2aqi">0</span></td>
             <td>Concentration:<span id="bangalore_O3">0</span> ppm <br> AQI:<span id="bangalore_O3aqi">0</span></td>
@@ -822,7 +841,7 @@
             <td><span id="bangalore_overall_aqi">0</span></td>
           </tr>
           <tr>
-            <th scope="row" >KOLKATA</th>
+            <th scope="row">KOLKATA</th>
             <td>Concentration:<span id="kolkata_CO">0</span> ppm <br> AQI:<span id="kolkata_COaqi">0</span></td>
             <td>Concentration:<span id="kolkata_NO2">0</span> ppm <br> AQI:<span id="kolkata_NO2aqi">0</span></td>
             <td>Concentration:<span id="kolkata_O3">0</span> ppm <br> AQI:<span id="kolkata_O3aqi">0</span></td>
@@ -856,58 +875,57 @@
     </div>
     <br><br>
   </main>
-  
-    <!--  -->
-    <!-- footer -->
-    <!--  -->
-    <footer id="footerinfo" id="fullfooter" class="pt-4 my-md-5 pt-md-5 border-top">
-      <div class="row">
-        <div id="footerlogo" class="col-12 col-md">
-          <img class="mb-2" src="rapidapilogo.svg" alt="logo" width="50%" height="50%">
-          <small class="d-block mb-3 text-body-secondary">© Since 2023 RapidAPI</small>
-        </div>
-        <!-- <div id="footerinfo"> -->
-        <div class="col-6 col-md">
-          <h5>Features</h5>
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-          </ul>
-        </div>
-        <div id="footerbottom" class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-          </ul>
-        </div>
-        <!-- </div> -->
+
+  <!--  -->
+  <!-- footer -->
+  <!--  -->
+  <footer id="footerinfo" id="fullfooter" class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div id="footerlogo" class="col-12 col-md">
+        <img class="mb-2" src="rapidapilogo.svg" alt="logo" width="50%" height="50%">
+        <small class="d-block mb-3 text-body-secondary">© Since 2023 RapidAPI</small>
       </div>
-    </footer>
-    <!--  -->
-    <!-- script -->
-    <!--  -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-    <script src="script2.js"></script>
-  </body>
+      <!-- <div id="footerinfo"> -->
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div id="footerbottom" class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+      <!-- </div> -->
+    </div>
+  </footer>
+  <!--  -->
+  <!-- script -->
+  <!--  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+</body>
+
 </html>
