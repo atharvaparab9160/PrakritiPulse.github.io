@@ -1,1 +1,1 @@
- https://atharvaparab9160.github.io/PrakritiPulse.github.io/
+https://atharvaparab9160.github.io/PrakritiPulse.github.io/
